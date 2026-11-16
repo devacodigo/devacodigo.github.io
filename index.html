@@ -406,7 +406,13 @@ section { max-width: 1080px; margin: 0 auto; padding: 96px max(5vw, 16px) 0; }
 .eni-arch-arrow::after { content: ''; width: 1px; height: 12px; background: var(--border-strong); }
 
 /* ── Achievements ──────────────────────── */
-.achievements-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.achievements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.achievement { display: flex; flex-direction: column; }
+.achievement .verify {
+  position: relative; z-index: 1; margin-top: auto; padding-top: 14px; align-self: flex-start;
+  font-size: .84rem; color: var(--text); text-decoration: none;
+}
+.achievement .verify:hover { color: var(--accent); }
 .achievement .eyebrow {
   font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 12px;
@@ -926,9 +932,22 @@ footer span { color: var(--text-dim); }
     <h2 class="section-title" data-num="05">Achievements</h2>
     <div class="achievements-grid">
       <div class="card achievement reveal">
-        <div class="eyebrow">Certification</div>
+        <div class="eyebrow">Certification · Aug 2026</div>
+        <h3>Claude Certified Architect</h3>
+        <p>Foundations — issued by Anthropic</p>
+        <a class="verify" href="https://www.credly.com/badges/1b342eb1-2d55-46e1-bdf4-d03e79354a77" target="_blank" rel="noopener">Verify credential ↗</a>
+      </div>
+      <div class="card achievement reveal">
+        <div class="eyebrow">Certification · Feb 2026</div>
         <h3>Databricks Certified</h3>
         <p>Generative AI Engineer Associate — LLM orchestration &amp; agentic system design</p>
+        <a class="verify" href="https://credentials.databricks.com/d6f13449-fd5e-4b17-aa34-d549ecfb80b2" target="_blank" rel="noopener">Verify credential ↗</a>
+      </div>
+      <div class="card achievement reveal">
+        <div class="eyebrow">Certification · Nov 2025</div>
+        <h3>Neo4j Certified</h3>
+        <p>Graph Data Science Certification — issued by Neo4j</p>
+        <a class="verify" href="https://graphacademy.neo4j.com/c/32199b26-6f92-471c-a008-b54fdcfbd7a4/" target="_blank" rel="noopener">Verify credential ↗</a>
       </div>
       <div class="card achievement reveal">
         <div class="eyebrow">Hackathon</div>
